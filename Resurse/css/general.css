@@ -1,0 +1,428 @@
+body {
+    --bg-main: #332B2B;
+    --text-main: #d4c4a8;
+    --accent-red: #8B322E;
+    --shadow-main: #000;
+    --accent-gold: #B5231E;
+    --accent-gold-hover: #E00900;
+    --bg-secondary: #362424;
+    --border-main: #5E312F;
+    --bg-tertiary: #5E312F;
+    --text-muted: #999;
+    --overlay-white: rgba(255, 255, 255, 0.03);
+    --overlay-black-light: rgba(0, 0, 0, 0.2);
+    --overlay-black-medium: rgba(0, 0, 0, 0.5);
+    --overlay-black-dark: rgba(0, 0, 0, 0.8);
+    --overlay-red-light: rgba(139, 50, 46, 0.2);
+    --overlay-red-medium: rgba(139, 50, 46, 0.6);
+    --overlay-red-strong: rgba(139, 50, 46, 0.7);
+    --overlay-red-dark: rgba(139, 50, 46, 0.8);
+    --overlay-red-solid: rgba(139, 50, 46, 1);
+    --text-light: #fff;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: 'Playfair Display', serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    transition: font-size 0.4s ease;
+    --page-spacing: 10vw;
+    --zone-padding: 1.5em;
+    --media-max-w: 800px;
+    --media-min-w: 250px;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+caption,
+th {
+    font-family: 'Cinzel', serif;
+    color: var(--text-main);
+}
+
+h1 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 1em;
+    color: var(--accent-red);
+    text-shadow: 2px 2px 4px var(--shadow-main);
+}
+
+h2 {
+    font-size: 2em;
+    border-bottom: 2px solid var(--accent-red);
+    margin-bottom: 1.5em;
+    padding-bottom: 0.5em;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+a {
+    color: var(--accent-gold);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--accent-gold-hover);
+    text-decoration: none;
+}
+
+p,
+ul,
+ol,
+dl,
+blockquote,
+figure {
+    margin-bottom: 1em;
+}
+
+ul,
+ol {
+    margin-left: 2em;
+}
+
+header,
+footer {
+    padding: var(--zone-padding);
+    background-color: var(--bg-tertiary);
+    border-top: 5px solid var(--accent-red);
+    border-bottom: 5px solid var(--accent-red);
+    box-shadow: 0 4px 15px var(--shadow-main);
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-main);
+    min-width: 200px;
+    z-index: 10;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+img,
+video,
+iframe,
+object,
+picture {
+    width: 100%;
+    max-width: var(--media-max-w);
+    min-width: var(--media-min-w);
+    height: auto;
+    border-radius: 5px;
+    border: 1px solid var(--border-main);
+}
+
+#grid-pagina {
+    margin-left: var(--page-spacing);
+    margin-right: var(--page-spacing);
+    margin-top: 2em;
+    margin-bottom: 2em;
+
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+        "zona1 zona1 zona1 zona1"
+        "zona5 zona6 zona6 zona7"
+        "zona3 zona3 zona2 zona2"
+        "zona4 zona4 zona2 zona2"
+        "zona8 zona8 zona8 zona8";
+}
+
+#grid-pagina>section {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-main);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px var(--overlay-black-medium);
+    padding: var(--zone-padding);
+    min-width: 0;
+}
+
+#bun-venit {
+    grid-area: zona1;
+}
+
+#orar {
+    grid-area: zona2;
+}
+
+#calendar {
+    grid-area: zona3;
+}
+
+#anunturi {
+    grid-area: zona4;
+}
+
+#utilizatori {
+    grid-area: zona5;
+}
+
+#statistici {
+    grid-area: zona6;
+}
+
+#server {
+    grid-area: zona7;
+}
+
+#diverse {
+    grid-area: zona8;
+}
+
+.table-container {
+    overflow-x: auto;
+    margin-top: 1em;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 5px inset var(--border-main);
+    background-color: var(--bg-main);
+}
+
+caption {
+    caption-side: bottom;
+    padding: 10px;
+    font-size: 0.9em;
+    color: var(--text-muted);
+}
+
+th,
+td {
+    padding: 10px;
+    border: 1px solid var(--border-main);
+    text-align: center;
+}
+
+th {
+    background-color: var(--bg-tertiary);
+}
+
+tbody tr:nth-child(odd) {
+    background-color: var(--overlay-white);
+    border: 2px solid var(--accent-red);
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--overlay-black-light);
+    border: 2px solid var(--border-main);
+    border-top: 2px solid var(--accent-red);
+    border-bottom: 2px solid var(--border-main);
+}
+
+tbody tr {
+    outline: 5px solid transparent;
+    transition: outline 0.5s ease, background-color 0.5s ease;
+}
+
+tbody tr:hover {
+    outline: 5px solid var(--overlay-red-strong);
+    background-color: var(--overlay-red-light);
+}
+
+.container-iframe {
+    display: flexbox;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    margin-top: 1em;
+}
+
+.container-iframe iframe {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.taburi-iframe {
+    display: flexbox;
+    flex-direction: row;
+    width: 100%;
+    max-width: 562px;
+    gap: 0px;
+}
+
+.taburi-iframe>a {
+    flex: 1;
+    box-sizing: border-box;
+    padding: 15px;
+    background-color: var(--bg-main);
+    border: 2px solid var(--border-main);
+    border-top: none;
+    color: var(--text-main);
+    text-align: center;
+    transition: all 0.3s ease;
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.8em;
+}
+
+.taburi-iframe>a:first-child {
+    border-radius: 0 0 10px 10px;
+}
+
+.taburi-iframe>a:not(:first-child) {
+    border-radius: 0 0 10px 10px;
+}
+
+.taburi-iframe>a:last-child {
+    border-radius: 0 0 10px 10px;
+}
+
+.taburi-iframe>a:hover {
+    background-color: var(--accent-red);
+    border-color: var(--text-light);
+    color: var(--text-light);
+    box-shadow: 0 0 10px var(--overlay-red-dark);
+    text-decoration: none;
+}
+
+#link-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--overlay-red-medium);
+    border-radius: 50% 10% 50% 10%;
+    border-top: 3px solid var(--text-main);
+    border-bottom: 3px solid var(--bg-main);
+    border-left: 3px solid var(--text-main);
+    border-right: 3px solid var(--bg-main);
+    box-shadow: inset 0 0 15px var(--overlay-black-dark), 0 4px 6px var(--overlay-black-medium);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.7;
+    transition: all 1s ease;
+    z-index: 1000;
+
+}
+
+#triunghi {
+    font-size: 1.875rem;
+    color: var(--text-light);
+    font-weight: bold;
+    text-shadow: 0 0 5px var(--text-light);
+    filter: blur(2px);
+    transition: filter 0.5s ease;
+}
+
+#link-top:hover {
+    opacity: 1;
+    transform: rotate(360deg);
+    border-radius: 50%;
+    background-color: var(--overlay-red-solid);
+}
+
+#link-top:hover #triunghi {
+    filter: blur(0);
+    transform: rotate(-360deg);
+}
+
+#link-top::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    background: var(--shadow-main);
+    color: var(--text-light);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.75rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    white-space: nowrap;
+}
+
+#link-top:hover::after {
+    opacity: 1;
+}
+
+@media screen and (max-width: 1200px) {
+
+    body {
+        font-size: 16px;
+        --page-spacing: 5vw;
+        --zone-padding: 1em;
+        --media-max-w: 100%;
+        --media-min-w: 200px;
+    }
+
+    #grid-pagina {
+        gap: 15px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "zona1 zona1"
+            "zona5 zona6"
+            "zona7 zona7"
+            "zona3 zona3"
+            "zona4 zona2"
+            "zona8 zona8";
+    }
+
+
+}
+
+@media screen and (max-width: 700px) {
+
+    body {
+        font-size: 14px;
+        --page-spacing: 2vw;
+        --zone-padding: 0.8em;
+        --media-max-w: 100%;
+        --media-min-w: 150px;
+    }
+
+    #grid-pagina {
+        gap: 10px;
+        display: block;
+    }
+
+    #grid-pagina>section {
+        margin-bottom: 10px;
+    }
+
+    #link-top,
+    #triunghi {
+        transition: none;
+        filter: none;
+        opacity: 1;
+        border-radius: 50%;
+        transform: none;
+    }
+}
