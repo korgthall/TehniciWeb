@@ -20,7 +20,6 @@ body {
     --overlay-red-solid: rgba(139, 50, 46, 1);
     --text-light: #fff;
 
-    /* Variabile de meniu */
     --nav-bg: #1A1110;
     --nav-text: #FDF5E6;
     --nav-sub-bg: #2A1A1A;
@@ -75,12 +74,44 @@ h3 {
 a {
     color: var(--accent-gold);
     text-decoration: none;
-    transition: color 0.3s;
+    transition: all 0.3s;
+}
+
+a:visited {
+    color: var(--text-muted);
 }
 
 a:hover {
     color: var(--accent-gold-hover);
     text-decoration: none;
+}
+
+a:active {
+    border: 2px solid var(--accent-gold);
+    border-radius: 50%;
+}
+
+a[href^="http"]::before {
+    content: "\2BB3";
+    font-size: 1.5em;
+    margin-right: 0.2em;
+    transition: color 0.3s;
+}
+
+a[href^="http"]:hover::before {
+    color: var(--accent-red);
+}
+
+main a {
+    background-image: radial-gradient(var(--accent-red) 0%, var(--accent-red) 40%, transparent 80%, transparent 100%);
+    background-position: center;
+    background-size: 0;
+    background-repeat: no-repeat;
+    transition: background-size 0.5s ease, color 0.3s;
+}
+
+main a:hover {
+    background-size: 100%;
 }
 
 p,
@@ -334,6 +365,10 @@ tbody tr:hover {
     line-height: 1;
 }
 
+footer #banner {
+    display: none
+}
+
 @media screen and (max-width: 1200px) {
 
     body {
@@ -383,11 +418,24 @@ tbody tr:hover {
         opacity: 1;
         border-radius: 50%;
         transform: none;
-        
+
     }
-    
+
     * {
         transition: none;
         animation: none;
     }
+}
+
+#video-vtt {
+    width: 80%;
+    min-width: 300px;
+    max-width: 800px;
+    display: block;
+    margin: 1em auto;
+}
+
+::cue {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: var(--nav-bg); 
 }

@@ -1,0 +1,31 @@
+{
+    "cale_baza": "/resurse/imagini/erori",
+    "eroare_default": {
+        "titlu": "Eroare !!!",
+        "text": "A survenit o eroare generică.",
+        "imagine": "interzis.png"
+    },
+    "info_erori": [
+        {
+            "identificator": 404,
+            "status": true,
+            "titlu": "404 - Pagină inexistentă",
+            "text": "Pagina cerută nu a fost găsită pe server.",
+            "imagine": "err404.png"
+        },
+        {
+            "identificator": 403,
+            "status": true,
+            "titlu": "403 - Acces Interzis",
+            "text": "Nu aveți permisiunea de a vizualiza acest conținut.",
+            "imagine": "interzis.png"
+        },
+        {
+            "identificator": 400,
+            "status": true,
+            "titlu": "400 - Cerere greșită",
+            "text": "Fișierul cerut nu are parametrii corecți.",
+            "imagine": "interzis.png"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ro">
+<%- include('../fragmente/head') %>
+<body id="top">
+<%- include('../fragmente/header') %>
+
+<main style="min-height: 70vh; display: flex; justify-content: center; align-items: center;">
+    <section style="text-align: center; padding: 50px 20px;">
+        <h2><%= locals.titlu %></h2>
+        <p><strong><%= locals.text %></strong></p>
+        <br>
+        <% if (locals.imagine) { %>
+            <img src="<%= locals.imagine %>" alt="Eroare" style="max-width: 300px; border-radius: 10px;">
+        <% } %>
+    </section>
+</main>
+
+<%- include('../fragmente/footer') %>
