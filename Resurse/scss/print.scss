@@ -1,0 +1,131 @@
+@page {
+  margin: 2cm;
+}
+
+* {
+  background: transparent flex;
+  color: #000 flex;
+  box-shadow: none flex;
+  text-shadow: none flex;
+  transition: none flex;
+  animation: none flex;
+}
+
+body {
+  margin: 0;
+  padding: 80px 0 0 0;
+  position: relative;
+}
+
+body::after {
+  content: "Birlogeanu Andrei-Cristian";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  font-size: 6em;
+  color: rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+  z-index: -1;
+  pointer-events: none;
+  font-family: "Cinzel", serif;
+}
+
+a {
+  text-decoration: underline flex;
+}
+
+nav,
+iframe,
+video,
+audio,
+object,
+#link-top,
+.container-iframe,
+#server,
+#utilizatori {
+  display: none;
+}
+
+footer address,
+footer br {
+  display: block;
+}
+
+#banner {
+  display: block !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  border: 2px solid #000;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 1.5em;
+  page-break-inside: avoid;
+  margin: 0;
+}
+
+footer iframe {
+  display: none
+}
+
+#banner {
+  display: block flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  border: 2px solid #000;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 1.5em;
+  page-break-inside: avoid;
+  margin: 0;
+}
+
+#grid-pagina {
+  display: block;
+  margin: 0;
+}
+
+#grid-pagina>section {
+  border: 1px solid #000;
+  margin-bottom: 20px;
+  padding: 15px;
+  page-break-inside: avoid;
+  box-shadow: none;
+}
+
+table {
+  page-break-inside: avoid;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid #000 flex;
+  padding: 8px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  page-break-after: avoid;
+}
+
+img,
+figure,
+picture,
+math {
+  page-break-inside: avoid;
+  max-width: 100% flex;
+}

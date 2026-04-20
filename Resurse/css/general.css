@@ -19,12 +19,19 @@ body {
     --overlay-red-dark: rgba(139, 50, 46, 0.8);
     --overlay-red-solid: rgba(139, 50, 46, 1);
     --text-light: #fff;
+
+    /* Variabile de meniu */
+    --nav-bg: #1A1110;
+    --nav-text: #FDF5E6;
+    --nav-sub-bg: #2A1A1A;
+    --nav-sub-hover-text: #FFFFFF;
+
     background-color: var(--bg-main);
     color: var(--text-main);
     font-family: 'Playfair Display', serif;
     line-height: 1.6;
     margin: 0;
-    padding: 0;
+    padding: 2px;
     font-size: 18px;
     transition: font-size 0.4s ease;
     --page-spacing: 10vw;
@@ -98,35 +105,6 @@ footer {
     border-bottom: 5px solid var(--accent-red);
     box-shadow: 0 4px 15px var(--shadow-main);
     text-align: center;
-}
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-nav ul li {
-    position: relative;
-}
-
-nav ul li ul {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: var(--bg-secondary);
-    border: 1px solid var(--border-main);
-    min-width: 200px;
-    z-index: 10;
-}
-
-nav ul li:hover ul {
-    display: block;
 }
 
 img,
@@ -253,10 +231,10 @@ tbody tr:hover {
 }
 
 .container-iframe {
-    display: flexbox;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     gap: 0;
     margin-top: 1em;
 }
@@ -267,15 +245,14 @@ tbody tr:hover {
 }
 
 .taburi-iframe {
-    display: flexbox;
+    display: flex;
     flex-direction: row;
+    justify-content: space-between;
     width: 100%;
-    max-width: 562px;
-    gap: 0px;
+    max-width: 800px;
 }
 
 .taburi-iframe>a {
-    flex: 1;
     box-sizing: border-box;
     padding: 15px;
     background-color: var(--bg-main);
@@ -312,65 +289,49 @@ tbody tr:hover {
 
 #link-top {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 60px;
-    height: 60px;
-    background-color: var(--overlay-red-medium);
-    border-radius: 50% 10% 50% 10%;
-    border-top: 3px solid var(--text-main);
-    border-bottom: 3px solid var(--bg-main);
-    border-left: 3px solid var(--text-main);
-    border-right: 3px solid var(--bg-main);
-    box-shadow: inset 0 0 15px var(--overlay-black-dark), 0 4px 6px var(--overlay-black-medium);
+    bottom: 1em;
+    left: 1em;
+    width: 3.5rem;
+    height: 3.5rem;
+    opacity: 0.5;
+    filter: blur(3px);
+    transition: filter 0.5s ease, opacity 0.5s ease;
+    text-decoration: none;
     display: flex;
-    justify-content: center;
     align-items: center;
-    opacity: 0.7;
-    transition: all 1s ease;
+    justify-content: center;
     z-index: 1000;
-
-}
-
-#triunghi {
-    font-size: 1.875rem;
-    color: var(--text-light);
-    font-weight: bold;
-    text-shadow: 0 0 5px var(--text-light);
-    filter: blur(2px);
-    transition: filter 0.5s ease;
 }
 
 #link-top:hover {
     opacity: 1;
-    transform: rotate(360deg);
-    border-radius: 50%;
-    background-color: var(--overlay-red-solid);
-}
-
-#link-top:hover #triunghi {
     filter: blur(0);
-    transform: rotate(-360deg);
 }
 
-#link-top::after {
-    content: attr(title);
+#cerc {
     position: absolute;
-    bottom: 70px;
-    right: 0;
-    background: var(--shadow-main);
-    color: var(--text-light);
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 0.75rem;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s;
-    white-space: nowrap;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 5px solid;
+    border-color: black white black white;
+    background: transparent;
+    box-sizing: border-box;
+    transition: transform 0.5s ease;
 }
 
-#link-top:hover::after {
-    opacity: 1;
+#link-top:hover #cerc {
+    transform: rotate(90deg);
+}
+
+#sageata {
+    position: relative;
+    z-index: 1;
+    color: var(--text-main);
+    font-size: 2rem;
+    line-height: 1;
 }
 
 @media screen and (max-width: 1200px) {
@@ -417,12 +378,16 @@ tbody tr:hover {
         margin-bottom: 10px;
     }
 
-    #link-top,
-    #triunghi {
-        transition: none;
+    #link-top {
         filter: none;
         opacity: 1;
         border-radius: 50%;
         transform: none;
+        
+    }
+    
+    * {
+        transition: none;
+        animation: none;
     }
 }

@@ -20,6 +20,8 @@
         href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./Resurse/css/nav.css">
+    <link rel="stylesheet" href="./Resurse/css/print.css" media="print">
 </head>
 
 <body id="top">
@@ -27,19 +29,45 @@
         <h1>Lama de Oțel - Săbii Istorice</h1>
 
         <nav>
-            <ul>
-                <li>Acasă
-                    <ul>
+            <input type="checkbox" id="ch-menu" class="hidden">
+            <label for="ch-menu" id="hamburger"><i class="fa-solid fa-bars"></i></label>
+            <ul class="meniu">
+                <li id="opt-acasa">
+                    <a href="#top">
+                        <i class="fa-solid fa-house" id="icon-acasa-burger"></i>
+                        <span class="fa-solid fa-house icon-main"></span><span class="text-optiune">Acasă</span>
+                    </a>
+                    <ul class="submeniu">
                         <li><a href="#bun-venit">Bun venit</a></li>
                         <li><a href="#produse">Produse și Categorii</a></li>
                         <li><a href="#evenimente">Evenimente HEMA</a></li>
                         <li><a href="#orar">Orar Magazin</a></li>
                     </ul>
                 </li>
-                <li><a href="catalog.html">Catalog Complet</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="Ghidul.html">Ghidul Cumparatorului</a></li>
-                <li><a href="DespreNoi.html">Despre noi si FAQ</a></li>
+                <li id="opt-galerii">
+                    <a href="#">
+                        <span class="fa-solid fa-images icon-main"></span><span class="text-optiune">Galerii</span>
+                    </a>
+                    <ul class="submeniu">
+                        <li><a href="#">Galerie Statică</a></li>
+                        <li><a href="#">Galerie Dinamică</a></li>
+                    </ul>
+                </li>
+                <li id="opt-catalog">
+                    <a href="catalog.html">
+                        <span class="fa-solid fa-khanda icon-main"></span><span class="text-optiune">Catalog Complet</span>
+                    </a>
+                </li>
+                <li id="opt-contact">
+                    <a href="contact.html">
+                        <span class="fa-solid fa-envelope icon-main"></span><span class="text-optiune">Contact</span>
+                    </a>
+                </li>
+                <li id="opt-despre">
+                    <a href="DespreNoi.html">
+                        <span class="fa-solid fa-users icon-main"></span><span class="text-optiune">Despre noi si FAQ</span>
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -281,6 +309,7 @@
     </main>
 
     <footer>
+        <p id="banner">Acesta este un proiect școlar!</p>
         <address>
             Contact Fictiv:<br>
             Telefon: <a href="tel:0700000000">0700 000 000</a><br>
@@ -302,7 +331,8 @@
     </footer>
 
     <a id="link-top" href="#top" title="Spre începutul paginii">
-        <div id="triunghi">&#8593;</div>
+        <div id="cerc"></div>
+        <span id="sageata">&#8593;</span>
     </a>
 </body>
 
