@@ -1,0 +1,151 @@
+// Suprascrierea variabilelor Bootstrap
+$body-bg: #332B2B; // Potrivire cu tema dark din Lame de Oțel
+$body-color: #d4c4a8; // Text general
+
+$primary: #8B322E;
+$secondary: #362424;
+$success: #5E312F; // Utilizăm o altă culoare din paletă pentru a mima 'success'
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "gold": #B5231E,
+  "dark": #1A1110,
+  "light": #FDF5E6
+);
+
+// Schimbare break-points pentru ecrane medii și mari
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 800px, // Breakpoint personalizat pentru ecran mediu
+  lg: 1100px, // Breakpoint personalizat pentru ecran mare
+  xl: 1400px,
+  xxl: 1600px
+);
+
+// Dimensionarea razelor de border
+$border-radius: 15px;
+
+// Dimensiunea literelor heading-urilor
+$h1-font-size: 2.5em;
+$h2-font-size: 2em;
+$h3-font-size: 1.5em;
+
+// Familia de font implicită
+$font-family-base: "Playfair Display", serif;
+
+// Încă 2 variabile alese: activare umbre și efect de gradient pe background-uri bootstrap
+$enable-shadows: true;
+$enable-gradients: true;
+
+// Import Bootstrap
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+// Corectare pentru linkurile implicite bootstrap care strică culoarea dacă nu e specificată în tag
+a {
+    color: var(--accent-gold);
+    text-decoration: none;
+}
+a:hover {
+    color: var(--accent-gold-hover);
+}
+
+// ---- Efecte CSS Etapa 5 ----
+
+// 1. Stilizare HR (Divider personalizat)
+.custom-hr {
+    height: 15px;
+    border: none;
+    margin: 2em 0;
+    background-image: 
+        linear-gradient(to right, transparent 0%, $primary 0%, $primary 40%, transparent 40%),
+        linear-gradient(to right, transparent 30%, $secondary 30%, $secondary 70%, transparent 70%),
+        linear-gradient(to right, transparent 60%, #B5231E 60%, #B5231E 100%, transparent 100%);
+    background-size: 80px 5px;
+    background-repeat: repeat-x;
+    background-position: 0 0, 0 5px, 0 10px;
+}
+
+// 2. Efect Duotone
+.duotone-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+    margin: 0 auto;
+    background-image: url("/resurse/imagini/sabiiPeRaft.png");
+    background-size: cover;
+    background-position: center;
+    transition: filter 0.5s;
+    border-radius: 10px;
+    overflow: hidden;
+    
+    &::before, &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        transition: opacity 0.5s;
+    }
+    
+    &::before {
+        background-color: $primary;
+        mix-blend-mode: multiply;
+    }
+    
+    &::after {
+        background-color: #B5231E; // gold
+        mix-blend-mode: screen;
+    }
+    
+    &:hover {
+        // Contrastul foarte puternic face efectul pur alb/negru (fără griuri spălăcite)
+        filter: grayscale(100%) contrast(200%) brightness(110%);
+        &::before, &::after {
+            opacity: 0;
+        }
+    }
+}
+
+// 3. Efect Reflexie Text
+.reflect-container {
+    position: relative;
+    display: block;
+    margin-bottom: 2em;
+    text-align: center;
+    width: 100%;
+    
+    .reflect-original, .reflect-clone {
+        font-family: $font-family-base;
+        color: $primary;
+        text-transform: uppercase;
+        margin: 0;
+        padding: 0;
+        font-size: 2.5rem;
+    }
+    
+    .reflect-clone {
+        transform: scaleY(-1);
+        opacity: 0.5;
+        // mask-image for ripple effect
+        -webkit-mask-image: repeating-radial-gradient(circle at 50% 100%, transparent 0px, black 5px, transparent 10px);
+        mask-image: repeating-radial-gradient(circle at 50% 100%, transparent 0px, black 5px, transparent 10px);
+        transition: all 0.3s;
+    }
+    
+    &:hover .reflect-clone {
+        animation: waterRipple 2s infinite linear;
+    }
+}
+
+@keyframes waterRipple {
+    0% { 
+        -webkit-mask-position: 0 0;
+        mask-position: 0 0;
+    }
+    100% { 
+        -webkit-mask-position: 0 20px;
+        mask-position: 0 20px;
+    }
+}

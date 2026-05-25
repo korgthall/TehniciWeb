@@ -1,22 +1,30 @@
 <!DOCTYPE html>
 <html lang="ro">
-<%- include('../fragmente/head') %>
+<head>
+    <%- include('../fragmente/head.ejs') %>
+</head>
 <body id="top">
-<%- include('../fragmente/header') %>
+    <%- include('../fragmente/header.ejs') %>
 
-<main style="min-height: 70vh; display: flex; justify-content: center; align-items: center;">
-    <section class="container-iframe" style="text-align: center; padding: 50px; flex-grow: 1;">
-        <h2>Despre Noi - Lama de Oțel</h2>
-        <p>Istoria magazinului nostru a început din pasiune pură pentru artele marțiale istorice europene (HEMA).</p>
-        <p>Forjăm fiecare lamă cu atenție la detaliile istorice și cu dedicare absolută față de clienții noștri.</p>
-        <br>
-        <p>Firma virtuală preia un concept vechi de secole și îl aduce în era digitală, oferindu-vă opțiuni variate:</p>
-        <ul style="text-align: left; max-width: 600px; margin: 0 auto;">
-            <li>Săbii asiatice și europene</li>
-            <li>Consultare documente și surse istorice</li>
-            <li>Echipament complet de sparring</li>
-        </ul>
-    </section>
-</main>
+    <main id="grid-pagina">
+        <section id="despre-noi">
+            <h2>Despre Noi</h2>
+            <p>Suntem pasionați de istoria armelor albe și dedicați aducerii acestor piese fantastice în mâinile colecționarilor și practicanților de HEMA (Historical European Martial Arts).</p>
+            <p>Magazinul "Lama de Oțel" a fost fondat din dorința de a oferi o selecție variată și autentică de săbii, spade și katane forjate manual. Colaborăm cu fierari talentați pentru a ne asigura că fiecare lamă este unică și funcțională.</p>
+        </section>
+        <section id="faq">
+            <h2>Întrebări Frecvente (FAQ)</h2>
+            <details>
+                <summary>De ce fel de întreținere are nevoie o sabie din oțel carbon?</summary>
+                <p>Oțelul carbon este predispus la rugină. Trebuie curățat după fiecare utilizare și uns regulat cu un strat subțire de ulei mineral (ex: ulei de cuișoare pentru katane sau ulei de arme).</p>
+            </details>
+            <details>
+                <summary>Livrați și în afara țării?</summary>
+                <p>În acest moment livrăm doar pe teritoriul României, însă plănuim să ne extindem la nivel european în curând.</p>
+            </details>
+        </section>
+    </main>
 
-<%- include('../fragmente/footer') %>
+    <%- include('../fragmente/footer.ejs') %>
+</body>
+</html>

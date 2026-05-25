@@ -6,24 +6,24 @@
         <label for="ch-menu" id="hamburger"><i class="fa-solid fa-bars"></i></label>
         <ul class="meniu">
             <li id="opt-acasa">
-                <a href="#top">
+                <a href="/">
                     <i class="fa-solid fa-house" id="icon-acasa-burger"></i>
                     <span class="fa-solid fa-house icon-main"></span><span class="text-optiune">Acasă</span>
                 </a>
                 <ul class="submeniu">
-                    <li><a href="/index#bun-venit">Bun venit</a></li>
-                    <li><a href="/index#produse">Produse și Categorii</a></li>
-                    <li><a href="/index#evenimente">Evenimente HEMA</a></li>
-                    <li><a href="/index#orar">Orar Magazin</a></li>
+                    <li><a href="/#bun-venit">Bun venit</a></li>
+                    <li><a href="/#produse">Produse și Categorii</a></li>
+                    <li><a href="/#evenimente">Evenimente HEMA</a></li>
+                    <li><a href="/#orar">Orar Magazin</a></li>
                 </ul>
             </li>
             <li id="opt-galerii">
-                <a href="#">
+                <a href="/galerii">
                     <span class="fa-solid fa-images icon-main"></span><span class="text-optiune">Galerii</span>
                 </a>
                 <ul class="submeniu">
-                    <li><a href="#">Galerie Statică</a></li>
-                    <li><a href="#">Galerie Dinamică</a></li>
+                    <li><a href="/galerii#galerie_statica">Galerie Statică</a></li>
+                    <li><a href="/galerii#galerie_dinamica">Galerie Dinamică</a></li>
                 </ul>
             </li>
             <li id="opt-catalog">
@@ -43,9 +43,4 @@
             </li>
         </ul>
     </nav>
-    <div id="date-utilizator">
-        <% if (locals.ip) { %>
-            <p>Adresa ta IP: <%= locals.ip %></p>
-        <% } %>
-    </div>
 </header>

@@ -1,0 +1,79 @@
+{
+  "cale_galerie": "/resurse/imagini/galerie",
+  "imagini": [
+    {
+      "cale_fisier": "1.png",
+      "titlu": "Sabie Model 1",
+      "alt": "Sabie clasica",
+      "text_descriere": "Sabie ascuțită manual",
+      "luni": ["ianuarie", "februarie", "martie", "aprilie", "mai", "iunie", "iulie", "august", "septembrie", "octombrie", "noiembrie", "decembrie"]
+    },
+    {
+      "cale_fisier": "2.png",
+      "titlu": "Spadă",
+      "text_descriere": "Spadă lungă medievală",
+      "luni": ["ianuarie", "februarie", "martie", "aprilie", "mai", "iunie", "iulie", "august", "septembrie", "octombrie", "noiembrie", "decembrie"]
+    },
+    {
+      "cale_fisier": "3.png",
+      "titlu": "Săbii pe raft",
+      "alt": "Săbii multiple",
+      "text_descriere": "Set de săbii pentru antrenament",
+      "luni": ["ianuarie", "februarie", "martie", "aprilie", "mai", "iunie", "iulie", "august", "septembrie", "octombrie", "noiembrie", "decembrie"]
+    },
+    {
+      "cale_fisier": "4.png",
+      "titlu": "Trofeu sabie",
+      "text_descriere": "Trofeu competițional",
+      "luni": ["ianuarie", "februarie", "martie", "aprilie", "mai", "iunie", "iulie", "august", "septembrie", "octombrie", "noiembrie", "decembrie"]
+    },
+    {
+      "cale_fisier": "5.png",
+      "titlu": "Sabie Model 2",
+      "text_descriere": "Oțel carbon de înaltă calitate",
+      "luni": ["ianuarie", "februarie", "martie", "aprilie", "mai", "iunie", "iulie", "august", "septembrie", "octombrie", "noiembrie", "decembrie"]
+    },
+    {
+      "cale_fisier": "6.png",
+      "titlu": "Spadă",
+      "text_descriere": "Echilibru perfect la nivelul gărzii",
+      "luni": ["ianuarie", "februarie", "martie", "aprilie", "mai", "iunie", "iulie", "august", "septembrie", "octombrie", "noiembrie", "decembrie"]
+    },
+    {
+      "cale_fisier": "7.png",
+      "titlu": "Colecție lame",
+      "text_descriere": "Echipamente HEMA gata de luptă",
+      "luni": ["ianuarie", "februarie", "martie", "aprilie", "mai", "iunie", "iulie", "august", "septembrie", "octombrie", "noiembrie", "decembrie"]
+    },
+    {
+      "cale_fisier": "8.png",
+      "titlu": "Trofeu Mare",
+      "text_descriere": "Simbolul onoarei",
+      "luni": ["ianuarie", "februarie", "martie", "aprilie", "mai", "iunie", "iulie", "august", "septembrie", "octombrie", "noiembrie", "decembrie"]
+    },
+    {
+      "cale_fisier": "9.png",
+      "titlu": "Sabie Model 3",
+      "text_descriere": "Pentru tăieri avansate",
+      "luni": ["ianuarie", "februarie", "martie", "aprilie", "mai", "iunie", "iulie", "august", "septembrie", "octombrie", "noiembrie", "decembrie"]
+    },
+    {
+      "cale_fisier": "10.png",
+      "titlu": "Spadă",
+      "text_descriere": "Ideală pentru scrima medievală",
+      "luni": ["ianuarie", "februarie", "martie", "aprilie", "mai", "iunie", "iulie", "august", "septembrie", "octombrie", "noiembrie", "decembrie"]
+    },
+    {
+      "cale_fisier": "11.png",
+      "titlu": "Raft Săbii",
+      "text_descriere": "Expunere impresionantă",
+      "luni": ["ianuarie", "februarie", "martie", "aprilie", "mai", "iunie", "iulie", "august", "septembrie", "octombrie", "noiembrie", "decembrie"]
+    },
+    {
+      "cale_fisier": "12.png",
+      "titlu": "Trofeu Suprem",
+      "text_descriere": "Decernat campionilor HEMA",
+      "luni": ["ianuarie", "februarie", "martie", "aprilie", "mai", "iunie", "iulie", "august", "septembrie", "octombrie", "noiembrie", "decembrie"]
+    }
+  ]
+}

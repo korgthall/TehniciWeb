@@ -1,15 +1,31 @@
 {
   "name": "lame-de-otel",
+  "version": "1.0.0",
   "description": "Lame de Oțel oferă săbii forjate, spade europene, katane japoneze și echipamente pentru pasionații de HEMA și arme albe istorice.",
   "keywords": [
-    "săbii",
+    "sabii",
     "spade",
-    "katane",
+    "katana",
     "HEMA",
-    "arme albe",
-    "colecție de săbii",
-    "oțel carbon",
-    "magazin arme"
+    "arme",
+    "albe",
+    "colectie",
+    "otel",
+    "carbon",
+    "magazin"
   ],
-  "author": "Birlogeanu Andrei-Cristian"
+  "license": "ISC",
+  "author": "Birlogeanu Andrei-Cristian",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.8",
+    "ejs": "^5.0.2",
+    "express": "^5.2.1",
+    "sass": "^1.100.0",
+    "sharp": "^0.34.5"
+  }
 }

@@ -1,18 +1,45 @@
 <!DOCTYPE html>
 <html lang="ro">
-<%- include('../fragmente/head') %>
+<head>
+    <%- include('../fragmente/head.ejs') %>
+    <title>Eroare - Lama de Oțel</title>
+    <style>
+        #err-coloane {
+            text-align: center;
+            padding: 3em;
+        }
+        #err-imag img {
+            max-width: 400px;
+            width: 100%;
+            margin: 0 auto;
+            display: block;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+        .err-text {
+            margin-top: 2em;
+        }
+    </style>
+</head>
 <body id="top">
-<%- include('../fragmente/header') %>
+    <%- include('../fragmente/header.ejs') %>
 
-<main style="min-height: 70vh; display: flex; justify-content: center; align-items: center;">
-    <section style="text-align: center; padding: 50px 20px;">
-        <h2><%= locals.titlu %></h2>
-        <p><strong><%= locals.text %></strong></p>
-        <br>
-        <% if (locals.imagine) { %>
-            <img src="<%= locals.imagine %>" alt="Eroare" style="max-width: 300px; border-radius: 10px;">
-        <% } %>
-    </section>
-</main>
-
-<%- include('../fragmente/footer') %>
+    <main id="grid-pagina">
+        <section style="grid-column: 1 / -1;">
+            <div id="err-coloane">
+                <div id="err-imag">
+                    <img src="<%- locals.imagine %>" alt="Imagine eroare" />
+                </div>
+                <div class="err-text">
+                    <h2><%- locals.titlu %></h2>
+                    <p><%- locals.text %></p>
+                    <br>
+                    <a href="/" class="btn-inapoi"><i class="fa-solid fa-arrow-left"></i> Înapoi la Magazin</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <%- include('../fragmente/footer.ejs') %>
+</body>
+</html>

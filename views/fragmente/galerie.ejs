@@ -1,0 +1,14 @@
+<div id="galerie-statica">
+    <h2>Galerie de Imagini</h2>
+    <div id="grid-galerie">
+        <% for(let i = 0; i < locals.imagini.length; i++) { %>
+            <figure class="galerie-item">
+                <picture>
+                    <source srcset="<%- locals.imagini[i].cale_fisier_mediu %>" media="(max-width: 800px)">
+                    <img src="<%- locals.imagini[i].cale_fisier_relativ %>" alt="<%- locals.imagini[i].alt || locals.imagini[i].titlu %>" title="<%- locals.imagini[i].text_descriere %>">
+                </picture>
+                <figcaption><%- locals.imagini[i].titlu %> - <%- locals.imagini[i].text_descriere %></figcaption>
+            </figure>
+        <% } %>
+    </div>
+</div>
