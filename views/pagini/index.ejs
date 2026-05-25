@@ -1,50 +1,38 @@
 <!DOCTYPE html>
 <html lang="ro">
-
 <head>
     <%- include('../fragmente/head.ejs') %>
 </head>
-
 <body id="top">
     <%- include('../fragmente/header.ejs') %>
-
     <div class="alert alert-success m-4 text-center shadow" role="alert">
         <strong>Noutăți!</strong> Colecția de iarnă a sosit. 
         <a href="#anunturi" class="btn btn-primary ms-3 text-white">Vezi Ofertele</a>
     </div>
-
     <main id="grid-pagina">
         <section id="bun-venit">
             <div class="reflect-container">
                 <h2 class="reflect-original"><i class="fa-solid fa-scroll"></i> Arsenalul Nostru</h2>
                 <h2 class="reflect-clone"><i class="fa-solid fa-scroll"></i> Arsenalul Nostru</h2>
             </div>
-            
             <p>Magazinul suprem pentru colecționari de arme albe</p>
-            
             <hr class="custom-hr">
-
             <p>Suntem destinația principală pentru pasionații de istorie și practicanții de <abbr
                     title="Historical European Martial Arts">HEMA</abbr>. Aici veți găsi <b>săbii</b> perfect
                 echilibrate, forjate din <b>oțel carbon</b>, gata de acțiune.</p>
-
             <p>Un termen des întâlnit în rândul pasionaților de <b>katane</b> japoneze pe care le comercializăm este
                 <dfn>Tameshigiri</dfn>, reprezentând arta testării lamelor pe rogojini din paie.
             </p>
-
             <blockquote cite="https://ro.wikipedia.org/wiki/Sabie">
                 <q>Sabia este o armă albă, de tăiat și de împuns, formată dintr-o lamă de oțel lungă, de obicei
                     încovoiată...</q>
                 <footer>— Extras din <cite>Wikipedia</cite></footer>
             </blockquote>
-
             <figure>
                 <div class="duotone-container">
-                    <!-- Efect duotone cu blend modes -->
                 </div>
                 <figcaption>Lame oțel carbon, gata de acțiune.</figcaption>
             </figure>
-
             <p>Puteți afla detaliile tehnice referitoare la tratamentul termic al săbiilor noastre aici:</p>
             <p>Detalii tehnice despre tratamentul termic al oțelului carbon (EN):
                 <br>
@@ -53,7 +41,6 @@
                 </a>
             </p>
         </section>
-
         <section id="utilizatori">
             <h2>Utilizatori Online</h2>
             <p>Peste 300 de pasionați de arme istorice și practicanți HEMA navighează în acest moment arsenalul nostru
@@ -62,33 +49,29 @@
             <p>Apropo, te vedem! IP-ul tau este: <strong><%- locals.ip %></strong></p>
             <% } %>
         </section>
-
         <section id="statistici">
             <h2>Date și Statistici</h2>
             <p>Avem peste 5000 de săbii livrate cu succes, 150 de modele unice în catalog și o medie de 4.9/5 stele din
                 recenziile clienților noștri.</p>
         </section>
 
-
-
         <section id="server">
             <h2>Date Server</h2>
             <p>Infrastructura noastră este la fel de solidă ca o armură de oțel. Protejăm datele tale cu atenție. Server
                 status: OK. Uptime: 99.9%.</p>
         </section>
-
         <section id="calendar">
             <h2>Calendar Evenimente</h2>
             <p>Descoperă următoarele ateliere de forjare, demonstrații de Tameshigiri și turnee de HEMA programate
                 pentru luna aceasta, unde ne poți întâlni fizic.</p>
         </section>
-
         <section id="anunturi">
             <h2>Anunțuri</h2>
             <p>Au revenit în stoc săbiile de tip Longsword pentru antrenament! Profită de ofertele speciale și
                 achiziționează echipamentul dorit înainte de epuizarea stocului.</p>
+            <hr class="custom-hr">
+            <p>Suntem încântați să anunțăm parteneriatul nostru cu noile forje tradiționale. Așteptăm cu nerăbdare noile modele de săbii asiatice în stocul nostru!</p>
         </section>
-
         <section id="orar">
             <h2>Orarul Magazinului</h2>
             <div class="table-container">
@@ -138,13 +121,11 @@
                 </table>
             </div>
         </section>
-
         <section id="diverse">
             <h2>Secțiuni Diverse</h2>
             <section id="evenimente">
                 <h2>Evenimente și Turnee</h2>
                 <p><strong>URGENT:</strong> Înscrierile pentru campionatul național se închid mâine seară!</p>
-
                 <ul>
                     <li><time datetime="2025-06-10T10:00">10 Iunie 2025, ora 10:00</time> - <b>Turneu de Spadă
                             Lungă</b>:
@@ -152,17 +133,14 @@
                     <li><time datetime="2025-07-15T14:30">15 Iulie 2025, ora 14:30</time> - <b>Atelier Tameshigiri</b>:
                         Demonstrație de tăiere oferită de meșterii noștri.</li>
                 </ul>
-
                 <p>Apasă pe poza de mai jos pentru a vedea trofeul de anul trecut (la rezoluție mare):</p>
                 <a href="/resurse/imagini/trofeuMare.png" target="_blank">
                     <img src="/resurse/imagini/trofeuMic.png" alt="Miniatură trofeu sabie" width="200">
                 </a>
             </section>
-
             <section id="produse">
                 <h2>Categoriile de Arme Albe</h2>
                 <p>Alegeți cu grijă. O spadă bună își alege ea stăpânul!</p>
-
                 <section id="Asiatice">
                     <h3>Săbii Asiatice</h3>
                     <p>Oferim lame forjate tradițional folosind oțeluri precum <i>Tamahagane</i>. Nu folosiți spray-uri
@@ -193,7 +171,6 @@
                         <mo>)</mo>
                     </math>
                 </section>
-
                 <section id="Europene">
                     <h3>Spade Europene și Armuri</h3>
                     <p>Spada medievală (Longsword) costa inițial <s>1200 RON</s>, dar o avem la reducere la <ins>950
@@ -212,10 +189,8 @@
                     </p>
                 </section>
             </section>
-
             <section id="suport">
                 <h2>Suport și Întrebări Frecvente</h2>
-
                 <details>
                     <summary>Lamele comercializate sunt ascuțite?</summary>
                     <p>Comercializăm atât variante bont (neascuțite, pentru sparing), cât și ascuțite (pentru tăiere).
@@ -225,7 +200,6 @@
                     <summary>Care este vârsta legală pentru achiziție?</summary>
                     <p>Trebuie să aveți minim 18 ani pentru a putea comanda arme albe de colecție.</p>
                 </details>
-
                 <h3>Statistici Stoc Magazin</h3>
                 <p>Nivel stoc săbii antrenament (Scăzut):
                     <meter value="15" min="0" max="100" low="30" high="80" optimum="90">15 din 100</meter>
@@ -234,12 +208,10 @@
                     <meter value="85" min="0" max="100" low="30" high="80" optimum="90">85 din 100</meter>
                 </p>
             </section>
-
             <section id="media">
                 <h2>Media & Demonstrații</h2>
                 <p>Pentru a înțelege tehnica, recomandăm o sursă externă: <a href="https://hemaalliance.com/"
                         target="_blank">HEMA Alliance</a>.</p>
-                
                 <div id="container-video-local">
                     <h3>Prezentare Video Sabie</h3>
                     <video id="sabie-video" poster="/resurse/imagini/sabiiPeRaft.png" controls preload="metadata">
@@ -249,7 +221,6 @@
                         <track src="/resurse/video/en.vtt" kind="captions" srclang="en" label="English">
                     </video>
                 </div>
-                
                 <div class="container-iframe">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/n5w2Mh6CyXo" name="ifr-video"
                         title="YouTube video player"
@@ -264,8 +235,6 @@
             </section>
         </section>
     </main>
-
     <%- include('../fragmente/footer.ejs') %>
 </body>
-
 </html>

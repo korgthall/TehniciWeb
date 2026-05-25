@@ -99,7 +99,6 @@
     z-index: 0;
     opacity: 0;
   }
-  /* Set up for when this image is NEXT in line */
   90.9090909091% {
     z-index: 1;
     opacity: 1;

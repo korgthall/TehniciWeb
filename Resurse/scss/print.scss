@@ -2,12 +2,10 @@
   margin-left: 2.5cm;
   margin-right: 0.5cm;
 }
-
 @page:right {
   margin-left: 0.5cm;
   margin-right: 2.5cm;
 }
-
 body {
   margin: 0;
   padding: 80px 0 0 0;
@@ -26,12 +24,10 @@ body {
   font-family: "Cinzel", serif;
 }
 }
-
 a {
   text-decoration: none;
   color:inherit;
 }
-
 nav,
 iframe,
 video,
@@ -43,12 +39,10 @@ object,
 #utilizatori {
   display: none;
 }
-
 footer address,
 footer br {
   display: block;
 }
-
 #banner {
   display: block !important;
   position: absolute;
@@ -64,17 +58,14 @@ footer br {
   page-break-inside: avoid;
   margin: 0;
 }
-
 footer iframe {
   display: none
 }
-
 
 #grid-pagina {
   display: block;
   margin: 0;
 }
-
 #grid-pagina>section {
   border: 1px solid #000;
   margin-bottom: 20px;
@@ -82,19 +73,16 @@ footer iframe {
   page-break-inside: avoid;
   box-shadow: none;
 }
-
 table {
   page-break-inside: avoid;
   border-collapse: collapse;
   width: 100%;
 }
-
 th,
 td {
   border: 1px solid #000 flex;
   padding: 8px;
 }
-
 h1,
 h2,
 h3,
@@ -103,7 +91,6 @@ h5,
 h6 {
   page-break-after: avoid;
 }
-
 img,
 figure,
 picture,

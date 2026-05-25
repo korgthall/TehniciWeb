@@ -11713,10 +11713,10 @@ a:hover {
   height: 15px;
   border: none;
   margin: 2em 0;
-  background-image: linear-gradient(to right, transparent 0%, #8B322E 0%, #8B322E 40%, transparent 40%), linear-gradient(to right, transparent 30%, #362424 30%, #362424 70%, transparent 70%), linear-gradient(to right, transparent 60%, #B5231E 60%, #B5231E 100%, transparent 100%);
-  background-size: 80px 5px;
+  background-image: linear-gradient(to right, #8B322E 0%, #8B322E 50%, transparent 50%), linear-gradient(to right, #FDF5E6 0%, #FDF5E6 50%, transparent 50%), linear-gradient(to right, #1A1110 0%, #1A1110 50%, transparent 50%);
+  background-size: 30px 5px;
   background-repeat: repeat-x;
-  background-position: 0 0, 0 5px, 0 10px;
+  background-position: 0 0, -5px 5px, 0 10px;
 }
 
 .duotone-container {
@@ -11760,7 +11760,8 @@ a:hover {
   text-align: center;
   width: 100%;
 }
-.reflect-container .reflect-original, .reflect-container .reflect-clone {
+.reflect-container .reflect-original,
+.reflect-container .reflect-clone {
   font-family: "Playfair Display", serif;
   color: #8B322E;
   text-transform: uppercase;

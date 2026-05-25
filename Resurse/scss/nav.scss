@@ -6,29 +6,24 @@ $nav-sub-hover-bg: var(--accent-gold);
 $nav-sub-hover-text: var(--nav-sub-hover-text);
 $border-color: var(--accent-red);
 $transition-duration: 0.4s;
-
 %reset-list {
     margin: 0;
     padding: 0;
     list-style: none;
 }
-
 %flex-center {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 nav {
     position: relative;
     background-color: var(--bg-main);
     border-top: 2px solid $border-color;
     border-bottom: 2px solid $border-color;
-
     .hidden {
         display: none;
     }
-
     #hamburger {
         display: none;
         cursor: pointer;
@@ -37,20 +32,16 @@ nav {
         color: $nav-text;
         background-color: $nav-bg;
     }
-
     #icon-acasa-burger {
         display: none;
     }
-
     ul.meniu {
         @extend %reset-list;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-
         >li {
             position: relative;
-
             >a {
                 @extend %flex-center;
                 gap: 8px;
@@ -62,7 +53,6 @@ nav {
                 position: relative;
                 overflow: hidden;
                 z-index: 1;
-
                 &::after {
                     content: '';
                     position: absolute;
@@ -75,16 +65,13 @@ nav {
                     transition: transform $transition-duration ease;
                     z-index: -1;
                 }
-
                 &:hover {
                     color: var(--text-light);
-
                     &::after {
                         transform: translate(-50%, -50%) scale(1);
                     }
                 }
             }
-
             ul.submeniu {
                 @extend %reset-list;
                 position: absolute;
@@ -93,14 +80,12 @@ nav {
                 min-width: 200px;
                 background-color: $nav-sub-bg;
                 border: 1px solid $border-color;
-
                 transform-origin: top left;
                 transform: scale(0);
                 opacity: 0;
                 visibility: hidden;
                 transition: transform $transition-duration ease, opacity $transition-duration ease, visibility $transition-duration ease;
                 z-index: 100;
-
                 li {
                     a {
                         display: block;
@@ -109,7 +94,6 @@ nav {
                         text-decoration: none;
                         transition: all 0.3s ease;
                         font-family: 'Playfair Display', serif;
-
                         &:hover {
                             background-color: $nav-sub-hover-bg;
                             color: $nav-sub-hover-text;
@@ -121,14 +105,12 @@ nav {
                         }
                     }
                 }
-
                 @for $i from 1 through 10 {
                     li:nth-child(#{$i}) {
                         transition-delay: $i * 0.02s;
                     }
                 }
             }
-
             &:hover>ul.submeniu {
                 transform: scale(1);
                 opacity: 1;
@@ -136,25 +118,21 @@ nav {
             }
         }
     }
-
     @media screen and (max-width: 1200px) and (min-width: 701px) {
         ul.meniu {
             >li>a {
                 .text-optiune {
                     display: none;
                 }
-
                 .icon-main {
                     font-size: 1.5em;
                 }
             }
-
             ul.submeniu li a {
                 font-size: 0.9em;
             }
         }
     }
-
     @media screen and (max-width: 700px) {
         #hamburger {
             display: block;
@@ -162,35 +140,28 @@ nav {
             width: 100%;
             box-sizing: border-box;
         }
-
         @keyframes arrowExpand {
             0% {
                 clip-path: polygon(0 0, 0 0, 0 50%, 0 100%, 0 100%);
             }
-
             80% {
                 clip-path: polygon(0 0, 70% 0, 100% 50%, 70% 100%, 0 100%);
             }
-
             100% {
                 clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 100%, 0 100%);
             }
         }
-
         @keyframes arrowCollapse {
             0% {
                 clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 100%, 0 100%);
             }
-
             40% {
                 clip-path: polygon(0 0, 70% 0, 100% 50%, 70% 100%, 0 100%);
             }
-
             100% {
                 clip-path: polygon(0 0, 0 0, 0 50%, 0 100%, 0 100%);
             }
         }
-
         ul.meniu {
             flex-direction: column;
             position: absolute;
@@ -201,34 +172,27 @@ nav {
             border: 2px solid $border-color;
             border-top: none;
             z-index: 1000;
-
             clip-path: polygon(0 0, 0 0, 0 50%, 0 100%, 0 100%);
             animation: arrowCollapse 0.6s forwards cubic-bezier(0.77, 0, 0.175, 1);
-
             >li {
                 width: 100%;
-
                 >a {
                     justify-content: flex-start;
                     padding: 15px 20px;
                     border-bottom: 1px solid $border-color;
                 }
-
                 &#opt-acasa {
                     >a {
-
                         .text-optiune,
                         .icon-main {
                             display: none;
                         }
-
                         #icon-acasa-burger {
                             display: block;
                             font-size: 1.5em;
                         }
                     }
                 }
-
                 ul.submeniu {
                     position: relative;
                     width: 100%;
@@ -239,12 +203,10 @@ nav {
                     background-color: transparent;
                     border: none;
                     border-bottom: 1px solid $border-color;
-
                     li a {
                         padding-left: 40px;
                     }
                 }
-
                 &:hover>ul.submeniu,
                 &:active>ul.submeniu,
                 &:focus-within>ul.submeniu {
@@ -253,7 +215,6 @@ nav {
                 }
             }
         }
-
         #ch-menu:checked~ul.meniu {
             clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 100%, 0 100%);
             animation: arrowExpand 0.6s forwards cubic-bezier(0.77, 0, 0.175, 1);
